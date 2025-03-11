@@ -202,7 +202,9 @@ impl GeyserPlugin for GeyserGrpcPlugin {
             is_startup_completed: AtomicBool::new(false),
             // don't skip startup to keep backwards compatability
             ignore_startup_updates: config.skip_startup_stream.unwrap_or(false),
-            account_data_notifications_enabled: config.account_data_notifications_enabled.unwrap_or(true),
+            account_data_notifications_enabled: config
+                .account_data_notifications_enabled
+                .unwrap_or(true),
         });
         info!("plugin data initialized");
 
@@ -343,7 +345,7 @@ impl GeyserPlugin for GeyserGrpcPlugin {
         &self,
         slot: u64,
         parent_slot: Option<u64>,
-        status: SlotStatus,
+        status: &SlotStatus,
     ) -> PluginResult<()> {
         let data = self.data.as_ref().expect("plugin must be initialized");
 
@@ -353,6 +355,7 @@ impl GeyserPlugin for GeyserGrpcPlugin {
             SlotStatus::Processed => SlotUpdateStatus::Processed,
             SlotStatus::Confirmed => SlotUpdateStatus::Confirmed,
             SlotStatus::Rooted => SlotUpdateStatus::Rooted,
+            _ => SlotUpdateStatus::Processed,
         };
 
         match data.slot_update_sender.try_send(TimestampedSlotUpdate {
@@ -514,7 +517,10 @@ impl GeyserPlugin for GeyserGrpcPlugin {
     }
 
     fn account_data_notifications_enabled(&self) -> bool {
-        self.data.as_ref().map(|d| d.account_data_notifications_enabled).unwrap_or(true)
+        self.data
+            .as_ref()
+            .map(|d| d.account_data_notifications_enabled)
+            .unwrap_or(true)
     }
 
     fn transaction_notifications_enabled(&self) -> bool {

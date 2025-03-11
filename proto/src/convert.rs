@@ -851,116 +851,119 @@ impl From<TransactionError> for tx_by_addr::TransactionError {
             transaction_error: match transaction_error {
                 TransactionError::AccountInUse => tx_by_addr::TransactionErrorType::AccountInUse,
                 TransactionError::AccountLoadedTwice => {
-                    tx_by_addr::TransactionErrorType::AccountLoadedTwice
-                }
+                                tx_by_addr::TransactionErrorType::AccountLoadedTwice
+                            }
                 TransactionError::AccountNotFound => {
-                    tx_by_addr::TransactionErrorType::AccountNotFound
-                }
+                                tx_by_addr::TransactionErrorType::AccountNotFound
+                            }
                 TransactionError::ProgramAccountNotFound => {
-                    tx_by_addr::TransactionErrorType::ProgramAccountNotFound
-                }
+                                tx_by_addr::TransactionErrorType::ProgramAccountNotFound
+                            }
                 TransactionError::InsufficientFundsForFee => {
-                    tx_by_addr::TransactionErrorType::InsufficientFundsForFee
-                }
+                                tx_by_addr::TransactionErrorType::InsufficientFundsForFee
+                            }
                 TransactionError::InvalidAccountForFee => {
-                    tx_by_addr::TransactionErrorType::InvalidAccountForFee
-                }
+                                tx_by_addr::TransactionErrorType::InvalidAccountForFee
+                            }
                 TransactionError::AlreadyProcessed => {
-                    tx_by_addr::TransactionErrorType::AlreadyProcessed
-                }
+                                tx_by_addr::TransactionErrorType::AlreadyProcessed
+                            }
                 TransactionError::BlockhashNotFound => {
-                    tx_by_addr::TransactionErrorType::BlockhashNotFound
-                }
+                                tx_by_addr::TransactionErrorType::BlockhashNotFound
+                            }
                 TransactionError::CallChainTooDeep => {
-                    tx_by_addr::TransactionErrorType::CallChainTooDeep
-                }
+                                tx_by_addr::TransactionErrorType::CallChainTooDeep
+                            }
                 TransactionError::MissingSignatureForFee => {
-                    tx_by_addr::TransactionErrorType::MissingSignatureForFee
-                }
+                                tx_by_addr::TransactionErrorType::MissingSignatureForFee
+                            }
                 TransactionError::InvalidAccountIndex => {
-                    tx_by_addr::TransactionErrorType::InvalidAccountIndex
-                }
+                                tx_by_addr::TransactionErrorType::InvalidAccountIndex
+                            }
                 TransactionError::SignatureFailure => {
-                    tx_by_addr::TransactionErrorType::SignatureFailure
-                }
+                                tx_by_addr::TransactionErrorType::SignatureFailure
+                            }
                 TransactionError::InvalidProgramForExecution => {
-                    tx_by_addr::TransactionErrorType::InvalidProgramForExecution
-                }
+                                tx_by_addr::TransactionErrorType::InvalidProgramForExecution
+                            }
                 TransactionError::SanitizeFailure => {
-                    tx_by_addr::TransactionErrorType::SanitizeFailure
-                }
+                                tx_by_addr::TransactionErrorType::SanitizeFailure
+                            }
                 TransactionError::ClusterMaintenance => {
-                    tx_by_addr::TransactionErrorType::ClusterMaintenance
-                }
+                                tx_by_addr::TransactionErrorType::ClusterMaintenance
+                            }
                 TransactionError::InstructionError(_, _) => {
-                    tx_by_addr::TransactionErrorType::InstructionError
-                }
+                                tx_by_addr::TransactionErrorType::InstructionError
+                            }
                 TransactionError::AccountBorrowOutstanding => {
-                    tx_by_addr::TransactionErrorType::AccountBorrowOutstandingTx
-                }
+                                tx_by_addr::TransactionErrorType::AccountBorrowOutstandingTx
+                            }
                 TransactionError::WouldExceedMaxBlockCostLimit => {
-                    tx_by_addr::TransactionErrorType::WouldExceedMaxBlockCostLimit
-                }
+                                tx_by_addr::TransactionErrorType::WouldExceedMaxBlockCostLimit
+                            }
                 TransactionError::UnsupportedVersion => {
-                    tx_by_addr::TransactionErrorType::UnsupportedVersion
-                }
+                                tx_by_addr::TransactionErrorType::UnsupportedVersion
+                            }
                 TransactionError::InvalidWritableAccount => {
-                    tx_by_addr::TransactionErrorType::InvalidWritableAccount
-                }
+                                tx_by_addr::TransactionErrorType::InvalidWritableAccount
+                            }
                 TransactionError::WouldExceedMaxAccountCostLimit => {
-                    tx_by_addr::TransactionErrorType::WouldExceedMaxAccountCostLimit
-                }
+                                tx_by_addr::TransactionErrorType::WouldExceedMaxAccountCostLimit
+                            }
                 TransactionError::WouldExceedAccountDataBlockLimit => {
-                    tx_by_addr::TransactionErrorType::WouldExceedAccountDataBlockLimit
-                }
+                                tx_by_addr::TransactionErrorType::WouldExceedAccountDataBlockLimit
+                            }
                 TransactionError::TooManyAccountLocks => {
-                    tx_by_addr::TransactionErrorType::TooManyAccountLocks
-                }
+                                tx_by_addr::TransactionErrorType::TooManyAccountLocks
+                            }
                 TransactionError::AddressLookupTableNotFound => {
-                    tx_by_addr::TransactionErrorType::AddressLookupTableNotFound
-                }
+                                tx_by_addr::TransactionErrorType::AddressLookupTableNotFound
+                            }
                 TransactionError::InvalidAddressLookupTableOwner => {
-                    tx_by_addr::TransactionErrorType::InvalidAddressLookupTableOwner
-                }
+                                tx_by_addr::TransactionErrorType::InvalidAddressLookupTableOwner
+                            }
                 TransactionError::InvalidAddressLookupTableData => {
-                    tx_by_addr::TransactionErrorType::InvalidAddressLookupTableData
-                }
+                                tx_by_addr::TransactionErrorType::InvalidAddressLookupTableData
+                            }
                 TransactionError::InvalidAddressLookupTableIndex => {
-                    tx_by_addr::TransactionErrorType::InvalidAddressLookupTableIndex
-                }
+                                tx_by_addr::TransactionErrorType::InvalidAddressLookupTableIndex
+                            }
                 TransactionError::InvalidRentPayingAccount => {
-                    tx_by_addr::TransactionErrorType::InvalidRentPayingAccount
-                }
+                                tx_by_addr::TransactionErrorType::InvalidRentPayingAccount
+                            }
                 TransactionError::WouldExceedMaxVoteCostLimit => {
-                    tx_by_addr::TransactionErrorType::WouldExceedMaxVoteCostLimit
-                }
+                                tx_by_addr::TransactionErrorType::WouldExceedMaxVoteCostLimit
+                            }
                 TransactionError::WouldExceedAccountDataTotalLimit => {
-                    tx_by_addr::TransactionErrorType::WouldExceedAccountDataTotalLimit
-                }
+                                tx_by_addr::TransactionErrorType::WouldExceedAccountDataTotalLimit
+                            }
                 TransactionError::DuplicateInstruction(_) => {
-                    tx_by_addr::TransactionErrorType::DuplicateInstruction
-                }
+                                tx_by_addr::TransactionErrorType::DuplicateInstruction
+                            }
                 TransactionError::InsufficientFundsForRent { .. } => {
-                    tx_by_addr::TransactionErrorType::InsufficientFundsForRent
-                }
+                                tx_by_addr::TransactionErrorType::InsufficientFundsForRent
+                            }
                 TransactionError::MaxLoadedAccountsDataSizeExceeded => {
-                    tx_by_addr::TransactionErrorType::MaxLoadedAccountsDataSizeExceeded
-                }
+                                tx_by_addr::TransactionErrorType::MaxLoadedAccountsDataSizeExceeded
+                            }
                 TransactionError::InvalidLoadedAccountsDataSizeLimit => {
-                    tx_by_addr::TransactionErrorType::InvalidLoadedAccountsDataSizeLimit
-                }
+                                tx_by_addr::TransactionErrorType::InvalidLoadedAccountsDataSizeLimit
+                            }
                 TransactionError::ResanitizationNeeded => {
-                    tx_by_addr::TransactionErrorType::ResanitizationNeeded
-                }
+                                tx_by_addr::TransactionErrorType::ResanitizationNeeded
+                            }
                 TransactionError::ProgramExecutionTemporarilyRestricted { .. } => {
-                    tx_by_addr::TransactionErrorType::ProgramExecutionTemporarilyRestricted
-                }
+                                tx_by_addr::TransactionErrorType::ProgramExecutionTemporarilyRestricted
+                            }
                 TransactionError::UnbalancedTransaction => {
-                    tx_by_addr::TransactionErrorType::UnbalancedTransaction
-                }
+                                tx_by_addr::TransactionErrorType::UnbalancedTransaction
+                            }
                 TransactionError::ProgramCacheHitMaxLimit => {
-                    tx_by_addr::TransactionErrorType::ProgramCacheHitMaxLimit
-                }
+                                tx_by_addr::TransactionErrorType::ProgramCacheHitMaxLimit
+                            }
+                TransactionError::CommitCancelled => {
+                                tx_by_addr::TransactionErrorType::CommitCancelled
+                            }
             } as i32,
             instruction_error: match transaction_error {
                 TransactionError::InstructionError(index, ref instruction_error) => {
